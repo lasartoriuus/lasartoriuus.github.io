@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('./img/login.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: rgb(49, 0, 0);
+    }
+</style>
+
+<body>
+    <h1>Registro</h1>
+    <form class="form-registro" id="registroForm">
+        <label class="label-registro" for="nombre">Nombre:</label>
+        <input class="input-registro" type="text" id="nombre" name="nombre" required>
+
+        <label class="label-registro" for="apellido">Apellido:</label>
+        <input class="input-registro" type="text" id="apellido" name="apellido" required>
+
+        <label class="label-registro" for="email">Correo Electrónico:</label>
+        <input class="input-registro" type="email" id="email" name="email" required>
+
+        <label class="label-registro" for="password">Contraseña:</label>
+        <input class="input-registro"type="password" id="password" name="password" required>
+
+        <label class="label-registro"  for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <script>
+        const formulario = document.getElementById('registroForm');
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const genero = document.getElementById('genero').value;
+
+            // Almacenar los datos en el localStorage
+            localStorage.setItem('usuario', JSON.stringify({
+                nombre,
+                apellido,
+                email,
+                password,
+                genero
+            }));
+
+            // Redirigir a la página de inicio de sesión
+            window.location.href = 'login.html'; // Reemplaza 'login.html' con el nombre de tu página de inicio de sesión
+        });
+    </script>
+</body>
+</html>
+
+
+    
+    
