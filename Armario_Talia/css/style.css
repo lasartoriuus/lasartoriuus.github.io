@@ -143,9 +143,9 @@ nav a.active {
         -1px 0px 2px rgba(255, 255, 255, 0);
 }
   
-/* Estilo vista de login */ 
+/* Estilo vista de Registro */ 
         .form-registro {
-            background-color: rgba(255, 0, 64, 0.209); /* Fondo blanco semitransparente */
+            background-color: rgba(255, 0, 64, 0.209); 
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0 2px 5px rgba(191, 35, 35, 0.3);
@@ -185,16 +185,13 @@ nav a.active {
           display: flex;
           justify-content: center;
           align-items: center;
-          overflow: hidden; /* Esto oculta cualquier contenido que sobrepase el contenedor */
+          overflow: hidden; 
       }
       
       .container {
-          /* ... tus estilos existentes ... */
-          width: 200%; /* Ajusta el ancho según sea necesario */
-          max-width: 200px; /* Establece un ancho máximo para evitar que se extienda demasiado */
+          width: 200%; 
+          max-width: 200px; /
       }
-      
-      /* Ocultar cualquier otro contenido (ejemplo): */
       .otro-contenido {
           display: none;
       }
@@ -203,7 +200,7 @@ nav a.active {
       .body {
         margin: 0;
         padding: 0;
-        background-image: url('../img/loginnn.avif'); /* Ajusta la ruta a tu imagen */
+        background-image: url('../img/loginnn.avif');
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
@@ -216,7 +213,7 @@ nav a.active {
     }
    
     h1 {
-        margin-left: 590px; /* Puedes ajustar el valor 20px a tu gusto */
+        margin-left: 590px; 
       }
 
       /* Tipo de letra para el login */
@@ -226,3 +223,34 @@ nav a.active {
         font-style: normal;
       }
       
+/*Estilos Login*/
+.body-login {
+    background-image: url('../img/loginnn.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Shadows Into Light", serif;
+    color: rgb(0, 0, 0);
+  }
+
+  .login-box {
+
+    width: 300px; 
+    margin: 150px auto; 
+    padding: 30px;
+    background-color: rgba(255, 0, 76, 0.071); 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(6, 6, 6, 0.974); 
+
+    
+  }
+
+  .login-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .style-text {
+    margin-bottom: -10%;
+  }
+
+    
