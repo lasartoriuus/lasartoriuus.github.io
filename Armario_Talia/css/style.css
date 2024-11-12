@@ -235,7 +235,7 @@ nav a.active {
   .login-box {
 
     width: 300px; 
-    margin: 150px auto; 
+    margin: 140px auto; 
     padding: 30px;
     background-color: rgba(255, 0, 76, 0.071); 
     border-radius: 10px; 
@@ -253,4 +253,10 @@ nav a.active {
     margin-bottom: -10%;
   }
 
-    
+    /* Boton salir */
+
+    a-salir {
+        text-decoration: none; /* Quita el subrayado por defecto */
+        color: rgb(255, 0, 157); /* Cambia el color del texto */
+        font-weight: bold; /* Hace el texto más grueso */
+      }
