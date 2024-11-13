@@ -8,7 +8,7 @@ nav a {
   float: left;
   color: black;
   text-align: center;
-  padding: 14px 26px;
+  padding: 4px 26px;
   text-decoration: none;
   width: 130px;
 }
@@ -27,7 +27,7 @@ nav a.active {
   /* Estilos de mi carrusel */
   .slide {
     position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    box-shadow: 0px 1px 6px rgba(255, 109, 109, 0.64);
     margin-top: 26px;
 }
 
@@ -40,7 +40,7 @@ nav a.active {
 
 .slide-open:checked+.slide-item {
     position: static;
-    opacity: 100;
+    opacity: 200;
 }
 
 .slide-item {
@@ -51,10 +51,10 @@ nav a.active {
 }
 
 .slide-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
+    width: 800px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
 }
+
 
 .slide-control {
     background: rgba(0, 0, 0, 0.28);
@@ -253,10 +253,32 @@ nav a.active {
     margin-bottom: -10%;
   }
 
-    /* Boton salir */
+  /* barra de busqueda */
+  .search-bar {
+    background-color: #ffffff;
+    border: 2px solid #ff83b283;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 20px;
+    margin-left: 50px;
+    
+    
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 2px;
+    font-size: 15px;
+}
 
-    a-salir {
-        text-decoration: none; /* Quita el subrayado por defecto */
-        color: rgb(255, 0, 157); /* Cambia el color del texto */
-        font-weight: bold; /* Hace el texto más grueso */
-      }
+.search-icon {
+    color: #ccc;
+    font-size: 30px;
+}
+.search-bar {
+    max-width: 300px; 
+
+}
+
