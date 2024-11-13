@@ -1,6 +1,6 @@
 /*Estilos Index */
 nav {
-  background-color: #ff91c475;
+  background-color: pink;
   overflow: hidden;
 }
 
@@ -8,13 +8,13 @@ nav a {
   float: left;
   color: black;
   text-align: center;
-  padding: 4px 26px;
+  padding: 6px 10px;
   text-decoration: none;
-  width: 130px;
+  width: 230px;
 }
 
 nav a:hover {
-  background-color: #ddd;
+  background-color: #ff0095;
 }
 
 nav a.active {
@@ -28,7 +28,7 @@ nav a.active {
   .slide {
     position: relative;
     box-shadow: 0px 1px 6px rgba(255, 109, 109, 0.64);
-    margin-top: 26px;
+    margin-top: 30px;
 }
 
 .slide-inner {
@@ -262,8 +262,8 @@ nav a.active {
     align-items: center;
     padding: 20px;
     height: 20px;
-    margin-left: 50px;
-    
+    margin-left: 40px;
+  }
     
 .search-input {
     flex: 1;
@@ -281,4 +281,23 @@ nav a.active {
     max-width: 300px; 
 
 }
+/* Incono */ 
 
+nav-aa {
+    text-align: center;
+    border-radius: 20px;
+}
+
+nav-aa {
+    display: inline-block;
+    margin-left: 1300px;
+    
+}
+
+
+.banner {
+    background-color: pink; /* Cambia el color a tu gusto */
+    color: white;
+    text-align: center;
+    padding: 10px; /* Ajusta el espacio interno si lo deseas */
+}
