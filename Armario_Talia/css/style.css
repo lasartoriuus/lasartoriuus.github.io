@@ -1,31 +1,31 @@
 /*Estilos Index */
 nav {
-  background-color: pink;
-  overflow: hidden;
+    background-color: pink;
+    overflow: hidden;
 }
 
 nav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 6px 10px;
-  text-decoration: none;
-  width: 230px;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 6px 10px;
+    text-decoration: none;
+    width: 230px;
 }
 
 nav a:hover {
-  background-color: #ff0095;
+    background-color: #ff0095;
 }
 
 nav a.active {
-  background-color: #8a0af3;
-  color: white;
+    background-color: #8a0af3;
+    color: white;
 }
 
 
 
-  /* Estilos de mi carrusel */
-  .slide {
+/* Estilos de mi carrusel */
+.slide {
     position: relative;
     box-shadow: 0px 1px 6px rgba(255, 109, 109, 0.64);
     margin-top: 30px;
@@ -51,13 +51,14 @@ nav a.active {
 }
 
 .slide-item img {
-    width: 800px; /* Adjust the width as needed */
-    height: 400px; /* Adjust the height as needed */
+    width: 100%;
+    height: 350px;
+    
 }
 
 
 .slide-control {
-    background: rgba(0, 0, 0, 0.28);
+    background: rgba(255, 84, 164, 0.205);
     border-radius: 50%;
     color: #fff;
     cursor: pointer;
@@ -113,20 +114,20 @@ nav a.active {
 }
 
 .slide-circulo {
-    color: #828282;
+    color: #ffffff;
     cursor: pointer;
     display: block;
     font-size: 35px;
 }
 
 .slide-circulo:hover {
-    color: #aaaaaa;
+    color: #ffffff;
 }
 
 #slide-1:checked~.control-1~.slide-indicador li:nth-child(1) .slide-circulo,
 #slide-2:checked~.control-2~.slide-indicador li:nth-child(2) .slide-circulo,
 #slide-3:checked~.control-3~.slide-indicador li:nth-child(3) .slide-circulo {
-    color: #428bca;
+    color: #ffffff;
 }
 
 #titulo {
@@ -142,87 +143,90 @@ nav a.active {
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
         -1px 0px 2px rgba(255, 255, 255, 0);
 }
-  
-/* Estilo vista de Registro */ 
-        .form-registro {
-            background-color: rgba(255, 0, 64, 0.209); 
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 2px 5px rgba(191, 35, 35, 0.3);
-            width: 30%;
-            margin-left: 33%;
-        }
 
-        .label-registro {
-            display: block;
-            margin-bottom: 5px;
-        }
+/* Estilo vista de Registro */
+.form-registro {
+    background-color: rgba(255, 0, 64, 0.209);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(191, 35, 35, 0.3);
+    width: 30%;
+    margin-left: 33%;
+}
 
-        .input-registro, select {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #000000;
-            border-radius: 4px;
-        }
+.label-registro {
+    display: block;
+    margin-bottom: 5px;
+}
 
-        button {
-            background-color: #ffffff1d;
-            color: rgb(0, 0, 0);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        body-back {
-          margin: 0;
-          padding: 0;
-          font-family: Arial, sans-serif;
-          background-image: url('');
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden; 
-      }
-      
-      .container {
-          width: 200%; 
-          max-width: 200px; /
-      }
-      .otro-contenido {
-          display: none;
-      }
-      
+.input-registro,
+select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
 
-      .body {
-        margin: 0;
-        padding: 0;
-        background-image: url('../img/loginnn.avif');
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        background-position: center; 
-        color: rgb(49, 0, 0);
-    }
-   
-    h1 {
-        margin-left: 590px; 
-      }
+button {
+    background-color: #ffffff1d;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-      /* Tipo de letra para el login */
-      .shadows-into-light-regular {
-        font-family: "Shadows Into Light", serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
+body-back {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 200%;
+    max-width: 200px;/
+}
+
+.otro-contenido {
+    display: none;
+}
+
+
+.body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/loginnn.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-position: center;
+    color: rgb(49, 0, 0);
+}
+
+h1 {
+    margin-left: 590px;
+}
+
+/* Tipo de letra para el login */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /*Estilos Login*/
 .body-login {
     background-image: url('../img/loginnn.avif');
@@ -230,31 +234,31 @@ nav a.active {
     background-repeat: no-repeat;
     font-family: "Shadows Into Light", serif;
     color: rgb(0, 0, 0);
-  }
+}
 
-  .login-box {
+.login-box {
 
-    width: 300px; 
-    margin: 140px auto; 
+    width: 300px;
+    margin: 140px auto;
     padding: 30px;
-    background-color: rgba(255, 0, 76, 0.071); 
-    border-radius: 10px; 
-    box-shadow: 0 2px 5px rgba(6, 6, 6, 0.974); 
+    background-color: rgba(255, 0, 76, 0.071);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(6, 6, 6, 0.974);
 
-    
-  }
 
-  .login-label {
+}
+
+.login-label {
     display: block;
     margin-bottom: 10px;
-  }
+}
 
-  .style-text {
+.style-text {
     margin-bottom: -10%;
-  }
+}
 
-  /* barra de busqueda */
-  .search-bar {
+/* barra de busqueda */
+.search-bar {
     background-color: #ffffff;
     border: 2px solid #ff83b283;
     border-radius: 30px;
@@ -263,8 +267,8 @@ nav a.active {
     padding: 20px;
     height: 20px;
     margin-left: 40px;
-  }
-    
+}
+
 .search-input {
     flex: 1;
     border: none;
@@ -277,27 +281,211 @@ nav a.active {
     color: #ccc;
     font-size: 30px;
 }
+
 .search-bar {
-    max-width: 300px; 
+    max-width: 300px;
 
 }
-/* Incono */ 
 
-nav-aa {
+/* Incono */
+
+.estilos-icono {
     text-align: center;
     border-radius: 20px;
-}
-
-nav-aa {
     display: inline-block;
-    margin-left: 1300px;
-    
+    margin-left: 65%;
+    margin-top: 8px;
+    width: 90%;
+    height: 90%;
 }
 
 
 .banner {
-    background-color: pink; /* Cambia el color a tu gusto */
+    background-color: pink;
+    /* Cambia el color a tu gusto */
     color: white;
     text-align: center;
-    padding: 10px; /* Ajusta el espacio interno si lo deseas */
+    padding: 10px;
+    /* Ajusta el espacio interno si lo deseas */
 }
+
+
+/* Carrusel de secciones */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    font-family: "Bebas Neue", sans-serif;
+    position: relative;
+}
+
+.carousel-title {
+    font-size: 20px;
+    color: #d89fd1;
+    margin-bottom: 50px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 150px;
+    /* Espacio entre elementos */
+    padding: 10px;
+    position: relative;
+    width: 145%;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+}
+
+.carousel-item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 140, 178, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-nav.left {
+    left: -250px;
+    /* Mueve la flecha izquierda hacia el borde */
+}
+
+.carousel-nav.right {
+    right: -250px;
+    /* Mueve la flecha derecha hacia el borde */
+}
+
+
+/*ESTILO DE ULTIMO*/
+
+/* Contenedor principal */
+.footer {
+    background-color: #ffe6e6;
+    /* Color de fondo */
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas */
+    gap: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para los iconos de sección */
+.footer .section-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Títulos de las secciones */
+.footer h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilo de las listas de enlaces */
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer ul li a:hover {
+    color: #d89fd1;
+    /* Color al pasar el mouse */
+}
+
+/* Estilos para la sección de redes sociales */
+.social-logos img {
+    width: 50px;
+    /* Tamaño de los íconos de redes sociales */
+    margin: 5px;
+    transition: transform 0.3s;
+    /* Animación de hover */
+}
+
+.social-logos img:hover {
+    transform: scale(1.2);
+    /* Aumenta el tamaño al pasar el mouse */
+}
+
+/* ESTILOS DE BARRA DE NAVEGACION*/
+
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #f5b5cf;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #f5b5cf;
+}
+
