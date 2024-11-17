@@ -54,6 +54,7 @@
 <head>
     <title>Productos</title>
 </head>
+
 <body>
     <!-- Galería de productos -->
     <div id="productos" class="product-gallery active">
@@ -124,6 +125,22 @@
                 <button>🛒</button>
             </div>
         </div>
+        <!-- Producto 5 -->
+        <div class="product">
+            <a href="#detalle-fijador" onclick="mostrarSeccion('detalle-fijador')">
+                <img src="../img/fijador.jpg" alt="Fijador de Cejas">
+            </a>
+            <p class="product-price">$7.000</p>
+            <p class="product-title">Fijador de cejas</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
 
         <!-- Detalles de los productos -->
         <div id="detalle-pomada" class="product-detail">
@@ -154,6 +171,13 @@
             <h2>Pomada de Cejas</h2>
             <p>Precio: $7.000</p>
             <p>Descripción: Ideal para rellenar y definir tus cejas con precisión.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        <div id="detalle-fijador" class="product-detail">
+            <img src="../img/fijador.jpg" alt="Fijador de cejas">
+            <h2>Fijador de Cejas</h2>
+            <p>Precio: $7.000</p>
+            <p>Descripción: Fijador de cejas en seco</p>
             <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
         </div>
         <!-- JavaScript -->

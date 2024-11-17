@@ -129,6 +129,22 @@
       <button>🛒</button>
     </div>
   </div>
+  <!-- Producto 5 -->
+  <div class="product">
+    <a href="#detalle-bluri" onclick="mostrarSeccion('detalle-bluri')">
+        <img src="../img/bluri.jpg" alt="Brocha + Beautyblender">
+    </a>
+    <p class="product-price">$5.000</p>
+    <p class="product-title">Brocha + Beautyblender</p>
+    <div class="quantity-controls">
+        <button>-</button>
+        <input type="number" value="1" min="1">
+        <button>+</button>
+    </div>
+    <div class="add-to-cart">
+        <button>🛒</button>
+    </div>
+</div>
 
   <!-- Detalles de los productos -->
   <div id="detalle-Abanico" class="product-detail">
@@ -164,6 +180,13 @@
     <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
   </div>
 
+  <div id="detalle-bluri" class="product-detail">
+    <img src="../img/bluri.jpg" alt="Brocha + Beautyblender">
+    <h2>Brocha + Beautyblender</h2>
+    <p>Precio: $5.000</p>
+    <p>Descripción: Brocha pequeña + Beautyblender</p>
+    <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+  </div>
   <!-- JavaScript -->
   <script>
     function mostrarSeccion(id) {

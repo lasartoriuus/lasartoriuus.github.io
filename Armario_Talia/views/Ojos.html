@@ -48,4 +48,142 @@
       <a class="bebas-neue-regular"  href="../views/Cejas.html">Cejas</a>
     </nav>
 </div>
-</div>
+
+<body>
+    <!-- Galería de productos -->
+    <div id="productos" class="product-gallery active">
+        <!-- Producto 1 -->
+        <div class="product">
+            <a href="#detalle-sombra" onclick="mostrarSeccion('detalle-sombra')">
+                <img src="../img/sombra.jpg" alt="Sombra de ojos">
+            </a>
+            <p class="product-price">$12.000</p>
+            <p class="product-title">Sombra de ojos</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+            <a href="#detalle-encrespador" onclick="mostrarSeccion('detalle-encrespador')">
+                <img src="../img/encrespador.jpg" alt="encrespador">
+            </a>
+            <p class="product-price">$10.000</p>
+            <p class="product-title">Encrespador</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+            <a href="#detalle-delineador" onclick="mostrarSeccion('detalle-delineador')">
+                <img src="../img/delineador.jpg" alt="Delineador en plumon negro">
+            </a>
+            <p class="product-price">$8.000</p>
+            <p class="product-title">Delineador en plumon negro</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+  <!-- Producto 3 -->
+        <div class="product">
+            <a href="#detalle-pestaniña" onclick="mostrarSeccion('detalle-pestaniña')">
+                <img src="../img/pestaniña.jpg" alt="Pestaniña Waterproof">
+            </a>
+            <p class="product-price">$20.000</p>
+            <p class="product-title">Pestaniña Waterproof</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+        <div class="product">
+            <a href="#detalle-separador" onclick="mostrarSeccion('detalle-separador')">
+                <img src="../img/separador.jpg" alt="Separador de pestañas">
+            </a>
+            <p class="product-price">$7.000</p>
+            <p class="product-title">Separador de pestañas</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Detalles de los productos -->
+        <div id="detalle-sombra" class="product-detail">
+            <img src="../img/sombra.jpg" alt="Tinta de labios" width="60%" height="60%">
+             <h2>Sombra de ojos </h2>
+            <p>Precio: $12.000</p>
+            <p>Descripción: Sombra de ojos escarchada, colores oscuros.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+
+        <div id="detalle-encrespador" class="product-detail">
+            <img src="../img/encrespador.jpg" alt="Encrespador">
+            <h2>Gloss</h2>
+            <p>Precio: $10.000</p>
+            <p>Descripción:Encrespador con caucho resistente al calor</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+
+        <div id="detalle-delineador" class="product-detail">
+            <img src="../img/delineador.jpg" alt="Delineador Plumon">
+            <h2>Delineador en plumon color negro </h2>
+            <p>Precio: $8.000</p>
+            <p>Descripción: Delineador plumon color negro.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        
+        <div id="detalle-pestaniña" class="product-detail">
+            <img src="../img/pestaniña.jpg" alt="Pestaniña Waterproof">
+            <h2>Pestaniña Waterproof</h2>
+            <p>Precio: $20.000</p>
+            <p>Descripción: Pestaniña Waterproof, color negro.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        <div id="detalle-separador" class="product-detail">
+            <img src="../img/separador.jpg" alt="Separador de pestañas">
+            <h2>Separador de pestañas</h2>
+            <p>Precio: $8.000</p>
+            <p>Descripción: Separador de pestañas.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        <!-- JavaScript -->
+        <script>
+            function mostrarSeccion(id) {
+                // Ocultar todas las secciones
+                document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+                    seccion.classList.remove('active');
+                });
+
+                // Mostrar la sección seleccionada
+                document.getElementById(id).classList.add('active');
+            }
+        </script>
+
+</body>

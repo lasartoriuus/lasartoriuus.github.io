@@ -48,4 +48,144 @@
       <a class="bebas-neue-regular"  href="../views/Cejas.html">Cejas</a>
     </nav>
 </div>
-</div>
+
+<body>
+    <!-- Galería de productos -->
+    <div id="productos" class="product-gallery active">
+        <!-- Producto 1 -->
+        <div class="product">
+            <a href="#detalle-tinta" onclick="mostrarSeccion('detalle-tinta')">
+                <img src="../img/tinta.jpg" alt="Tinta de labios">
+            </a>
+            <p class="product-price">$7.000</p>
+            <p class="product-title">Tinta de labios</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+            <a href="#detalle-rosa" onclick="mostrarSeccion('detalle-rosa')">
+                <img src="../img/rosa.jpg" alt="Gel Fijador">
+            </a>
+            <p class="product-price">$10.000</p>
+            <p class="product-title">Gloss</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+            <a href="#detalle-lapizlabial" onclick="mostrarSeccion('detalle-lapizlabial')">
+                <img src="../img/lapizlabial.jpg" alt="Lapiz Terra cota">
+            </a>
+            <p class="product-price">$5.000</p>
+            <p class="product-title">Lapiz Terra cota</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product">
+            <a href="#detalle-gloos_alove" onclick="mostrarSeccion('detalle-gloos_alove')">
+                <img src="../img/gloos_alove.jpg" alt="Gloos Alove vera ">
+            </a>
+            <p class="product-price">$10.000</p>
+            <p class="product-title">Gloos Alove vera</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+        <!-- Producto 5 -->
+        <div class="product">
+            <a href="#detalle-labial" onclick="mostrarSeccion('detalle-labial')">
+                <img src="../img/labial.jpg" alt="Labial Mate">
+            </a>
+            <p class="product-price">$10.000</p>
+            <p class="product-title">Labial Mate</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Detalles de los productos -->
+        <div id="detalle-tinta" class="product-detail">
+            <img src="../img/tinta.jpg" alt="Tinta de labios" width="60%" height="60%">
+             <h2>Tinta de labios</h2>
+            <p>Precio: $7.000</p>
+            <p>Descripción: Ideal para pintar tus labios dejando un acabdo natural</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+
+        <div id="detalle-rosa" class="product-detail">
+            <img src="../img/rosa.jpg" alt="Gloss">
+            <h2>Gloss</h2>
+            <p>Precio: $10.000</p>
+            <p>Descripción:Gloss con brillantina, acabado natural</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+
+        <div id="detalle-lapizlabial" class="product-detail">
+            <img src="../img/lapizlabial.jpg" alt="Lapiz terra cota">
+            <h2>Lapiz Terra cota</h2>
+            <p>Precio: $5.000</p>
+            <p>Descripción: Lapiz labial, ideal para delinear tus labios</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        <div id="detalle-gloos_alove" class="product-detail">
+            <img src="../img/gloos_alove.jpg" alt="Gloss Alove vera">
+            <h2>Gloss Alove vera</h2>
+            <p>Precio: $10.000</p>
+            <p>Descripción: Gloos con estrracto de Alove vera.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+
+        <div id="detalle-labial" class="product-detail">
+            <img src="../img/labial.jpg" alt="Labial Mate">
+            <h2>Labial Mate</h2>
+            <p>Precio: $10.000</p>
+            <p>Descripción: Labial Mate, cota terra</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        <!-- JavaScript -->
+        <script>
+            function mostrarSeccion(id) {
+                // Ocultar todas las secciones
+                document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+                    seccion.classList.remove('active');
+                });
+
+                // Mostrar la sección seleccionada
+                document.getElementById(id).classList.add('active');
+            }
+        </script>
+
+</body>

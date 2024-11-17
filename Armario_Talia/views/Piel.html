@@ -48,4 +48,138 @@
       <a class="bebas-neue-regular"  href="../views/Cejas.html">Cejas</a>
     </nav>
 </div>
-</div>
+<div id="productos" class="product-gallery active">
+    <!-- Producto 1 -->
+    <div class="product">
+        <a href="#detalle-corrector" onclick="mostrarSeccion('detalle-corrector')">
+            <img src="../img/corrector.jpg" alt="corrector">
+        </a>
+        <p class="product-price">$15.000</p>
+        <p class="product-title">Corrector de Ojos</p>
+        <div class="quantity-controls">
+            <button>-</button>
+            <input type="number" value="1" min="1">
+            <button>+</button>
+        </div>
+        <div class="add-to-cart">
+            <button>🛒</button>
+        </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="product">
+        <a href="#detalle-hadas" onclick="mostrarSeccion('detalle-hadas')">
+            <img src="../img/hadas.jpg" alt="Polvos de Hadas">
+        </a>
+        <p class="product-price">$10.000</p>
+        <p class="product-title">Polvo de hadas</p>
+        <div class="quantity-controls">
+            <button>-</button>
+            <input type="number" value="1" min="1">
+            <button>+</button>
+        </div>
+        <div class="add-to-cart">
+            <button>🛒</button>
+        </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="product">
+        <a href="#detalle-agua" onclick="mostrarSeccion('detalle-agua')">
+            <img src="../img/agua.jpg" alt="Agua micelar">
+        </a>
+        <p class="product-price">$15.000</p>
+        <p class="product-title">Agua micelar</p>
+        <div class="quantity-controls">
+            <button>-</button>
+            <input type="number" value="1" min="1">
+            <button>+</button>
+        </div>
+        <div class="add-to-cart">
+            <button>🛒</button>
+        </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="product">
+        <a href="#detalle-base" onclick="mostrarSeccion('detalle-base')">
+            <img src="../img/base.jpg" alt="Base">
+        </a>
+        <p class="product-price">$12.000</p>
+        <p class="product-title">Base</p>
+        <div class="quantity-controls">
+            <button>-</button>
+            <input type="number" value="1" min="1">
+            <button>+</button>
+        </div>
+        <div class="add-to-cart">
+            <button>🛒</button>
+        </div>
+    </div>
+    <div class="product">
+        <a href="#detalle-rubor" onclick="mostrarSeccion('detalle-rubor')">
+            <img src="../img/rubor.jpg" alt="Rubor Liquido">
+        </a>
+        <p class="product-price">$10.000</p>
+        <p class="product-title">Rubor Liquido</p>
+        <div class="quantity-controls">
+            <button>-</button>
+            <input type="number" value="1" min="1">
+            <button>+</button>
+        </div>
+        <div class="add-to-cart">
+            <button>🛒</button>
+        </div>
+    </div>
+    <!-- Detalles de los productos -->
+    <div id="detalle-sombra" class="product-detail">
+        <img src="../img/corrector.jpg" alt="Corrector de Ojos" width="60%" height="60%">
+         <h2>Correcto de ojos loquido </h2>
+        <p>Precio: $15.000</p>
+        <p>Descripción: Corrector de ojos liquido.</p>
+        <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+    </div>
+
+    <div id="detalle-hadas" class="product-detail">
+        <img src="../img/hadas.jpg" alt="Polvos de Hadas">
+        <h2>Polvo de hadas</h2>
+        <p>Precio: $10.000</p>
+        <p>Descripción:Polvo de hadas, rosado.</p>
+        <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+    </div>
+
+    <div id="detalle-agua" class="product-detail">
+        <img src="../img/agua.jpg" alt="Agua micelar">
+        <h2>Agua micelar</h2>
+        <p>Precio: $15.000</p>
+        <p>Descripción:Agua de garnier, para desmaquillar</p>
+        <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+    </div>
+    <div id="detalle-base" class="product-detail">
+        <img src="../img/base.jpg" alt="Base">
+        <h2>Base</h2>
+        <p>Precio: $12.000</p>
+        <p>Descripción:Base liquida para rostro.</p>
+        <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+    </div>
+    <div id="detalle-rubor" class="product-detail">
+        <img src="../img/rubor.jpg" alt="Rubor Liquido">
+        <h2>Rubor Liquido</h2>
+        <p>Precio: $10.000</p>
+        <p>Descripción: Rubor liquido, color rosa</p>
+        <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+    </div>
+    <!-- JavaScript -->
+    <script>
+        function mostrarSeccion(id) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+                seccion.classList.remove('active');
+            });
+
+            // Mostrar la sección seleccionada
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
