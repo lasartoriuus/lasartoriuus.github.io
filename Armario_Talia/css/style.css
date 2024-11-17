@@ -400,7 +400,7 @@ h1 {
     gap: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
-}
+ }
 
 /* Estilos para los iconos de sección */
 .footer .section-icon {
@@ -627,3 +627,19 @@ body {
     gap: 20px;
 }
 
+/* Pixeles */
+@media (max-width: 480px) {
+}
+
+    body {
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+    
+  @media (min-width: 1368px) {
+  } 
+    body {
+      font-size: 18px;
+    }
+  
