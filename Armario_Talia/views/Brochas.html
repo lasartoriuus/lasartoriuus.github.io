@@ -26,7 +26,7 @@
     <form class="search-box" action="../views/Brochas.html" method="GET">
       <form class="search-box" action="../views/Cejas.html" method="GET">
         <form class="search-box" action="../views/Labios.html" method="GET">
-          <form class="search-box" action="../views/Ojos.html method="GET">
+          <form class="search-box" action="../views/Ojos.html method=" GET">
             <form class="search-box" action="../views/Piel.html" method="GET">
               <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
               <button type="submit" class="search-button">🔍</button>
@@ -40,11 +40,143 @@
   <br>
   <br>
   <nav style="margin-top: 30px;">
-    <a class="bebas-neue-regular"  href="../views/Brochas.html">Brochas</a>
-    <a class="bebas-neue-regular"  href="../views/Labios.html">Labios</a>
-    <a class="bebas-neue-regular"  href="../views/Ojos.html">Ojos</a>
-    <a class="bebas-neue-regular"  href="../views/Piel.html">Piel</a>
-    <a class="bebas-neue-regular"  href="../views/Cejas.html">Cejas</a>
+    <a class="bebas-neue-regular" href="../views/Brochas.html">Brochas</a>
+    <a class="bebas-neue-regular" href="../views/Labios.html">Labios</a>
+    <a class="bebas-neue-regular" href="../views/Ojos.html">Ojos</a>
+    <a class="bebas-neue-regular" href="../views/Piel.html">Piel</a>
+    <a class="bebas-neue-regular" href="../views/Cejas.html">Cejas</a>
   </nav>
 </div>
 </div>
+
+<head>
+  <title>Productos</title>
+</head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+</head>
+
+<body>
+
+  <!-- Galería de productos -->
+  <div id="productos" class="product-gallery active">
+    <!-- Producto 1 -->
+    <div class="product">
+      <a href="#detalle-Abanico" onclick="mostrarSeccion('detalle-Abanico')">
+        <img src="../img/Abanico.jpg" alt="Brocha grande en abanico">
+      </a>
+      <p class="product-price">$3.000</p>
+      <p class="product-title">Brocha grande en abanico</p>
+      <div class="quantity-controls">
+        <button>-</button>
+        <input type="number" value="1" min="1">
+        <button>+</button>
+      </div>
+      <div class="add-to-cart">
+        <button>🛒</button>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="product">
+      <a href="#detalle-angulo" onclick="mostrarSeccion('detalle-angulo')">
+        <img src="../img/angulo.jpg" alt="Brocha grande en angulo">
+      </a>
+      <p class="product-price">$3.000</p>
+      <p class="product-title">Brocha grande en angulo</p>
+      <div class="quantity-controls">
+        <button>-</button>
+        <input type="number" value="1" min="1">
+        <button>+</button>
+      </div>
+      <div class="add-to-cart">
+        <button>🛒</button>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="product">
+      <a href="#detalle-Mejillas" onclick="mostrarSeccion('detalle-mejillas')">
+        <img src="../img/mejillas.jpg" alt="Brocha grande para mejillas">
+      </a>
+      <p class="product-price">$3.000</p>
+      <p class="product-title">Brocha para mejillas</p>
+      <div class="quantity-controls">
+        <button>-</button>
+        <input type="number" value="1" min="1">
+        <button>+</button>
+      </div>
+      <div class="add-to-cart">
+        <button>🛒</button>
+      </div>
+    </div>
+   <!-- Producto 4 -->
+   <div class="product">
+    <a href="#detalle-plana" onclick="mostrarSeccion('detalle-plana')">
+      <img src="../img/plana.jpg" alt="Brocha pequeña de cejas">
+    </a>
+    <p class="product-price">$3.000</p>
+    <p class="product-title">Brocha para cejas</p>
+    <div class="quantity-controls">
+      <button>-</button>
+      <input type="number" value="1" min="1">
+      <button>+</button>
+    </div>
+    <div class="add-to-cart">
+      <button>🛒</button>
+    </div>
+  </div>
+
+  <!-- Detalles de los productos -->
+  <div id="detalle-Abanico" class="product-detail">
+    <img src="../img/Abanico.jpg" alt="Brocha en abanico">
+    <h2>Brocha grande en Abanico</h2>
+    <p>Precio: $3.000</p>
+    <p>Descripción:
+      La brocha en abanico tiene cerdas abiertas en forma de abanico, ideal para difuminar, aplicar toques.</p>
+    <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+  </div>
+
+  <div id="detalle-angulo" class="product-detail">
+    <img src="../img/angulo.jpg" alt="Brocha grande en Angulo">
+    <h2>Brocha en angulo</h2>
+    <p>Precio: $3.000</p>
+    <p>Descripción:brocha grande con forma inclinada, perfecta para aplicar maquillaje en polvo en zonas grandes de la cara de manera uniforme..</p>
+    <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+  </div>
+
+  <div id="detalle-mejillas" class="product-detail">
+    <img src="../img/mejillas.jpg" alt="Brocha para mejillas">
+    <h2>Brocha mejillas</h2>
+    <p>Precio: $3.000</p>
+    <p>Descripción: Brocha para aplicacion de rubor.</p>
+    <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+  </div>
+
+  <div id="detalle-plana" class="product-detail">
+    <img src="../img/plana.jpg" alt="Brocha plana cejas">
+    <h2>Brocha grande en Abanico</h2>
+    <p>Precio: $3.000</p>
+    <p>Descripción: Brocha plana pequeña perfecta para tus cejas</p>
+    <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function mostrarSeccion(id) {
+      // Ocultar todas las secciones
+      document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+        seccion.classList.remove('active');
+      });
+
+      // Mostrar la sección seleccionada
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>

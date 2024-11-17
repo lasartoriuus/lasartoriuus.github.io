@@ -22,18 +22,19 @@
     </section>
     <div style="display: flex; margin-top: -10px;">
         <img style="margin-top: -10px;" src="../img/logo.png" alt="logo" width="120" height="80">
-            <div class="search-container">
-            </div>
-            <form class="search-box" action="./views/Labios.html" method="GET">
-            <form class="search-box" action="./views/Cejas.html" method="GET">  
-            <form class="search-box" action="./views/Ojos.html" method="GET">
-            <form class="search-box" action="./views/Piel.html" method="GET">
-            <form class="search-box" action="./views/Brochas.html" method="GET">   
-                <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
-                <button type="submit" class="search-button">🔍</button>
-            </form>
-            <a class="estilos-icono" href="../login.html"><img src="../img/inicio.jpg" alt="Icono de inicio" width="30 "
-                height="30"></a>
+        <div class="search-container">
+        </div>
+        <form class="search-box" action="./views/Labios.html" method="GET">
+            <form class="search-box" action="./views/Cejas.html" method="GET">
+                <form class="search-box" action="./views/Ojos.html" method="GET">
+                    <form class="search-box" action="./views/Piel.html" method="GET">
+                        <form class="search-box" action="./views/Brochas.html" method="GET">
+                            <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?"
+                                required>
+                            <button type="submit" class="search-button">🔍</button>
+                        </form>
+                        <a class="estilos-icono" href="../login.html"><img src="../img/inicio.jpg" alt="Icono de inicio"
+                                width="30 " height="30"></a>
     </div>
 </body>
 
@@ -41,11 +42,133 @@
     <br>
     <br>
     <nav style="margin-top: 30px;">
-        <a class="bebas-neue-regular"  href="../views/Brochas.html">Brochas</a>
-        <a class="bebas-neue-regular"  href="../views/Labios.html">Labios</a>
-        <a class="bebas-neue-regular"  href="../views/Ojos.html">Ojos</a>
-        <a class="bebas-neue-regular"  href="../views/Piel.html">Piel</a>
-        <a class="bebas-neue-regular"  href="../views/Cejas.html">Cejas</a>
+        <a class="bebas-neue-regular" href="../views/Brochas.html">Brochas</a>
+        <a class="bebas-neue-regular" href="../views/Labios.html">Labios</a>
+        <a class="bebas-neue-regular" href="../views/Ojos.html">Ojos</a>
+        <a class="bebas-neue-regular" href="../views/Piel.html">Piel</a>
+        <a class="bebas-neue-regular" href="../views/Cejas.html">Cejas</a>
     </nav>
 </div>
 </div>
+
+<head>
+    <title>Productos</title>
+</head>
+<body>
+    <!-- Galería de productos -->
+    <div id="productos" class="product-gallery active">
+        <!-- Producto 1 -->
+        <div class="product">
+            <a href="#detalle-pomada" onclick="mostrarSeccion('detalle-pomada')">
+                <img src="../img/pomada.jpg" alt="Pomada de Cejas">
+            </a>
+            <p class="product-price">$10.000</p>
+            <p class="product-title">Pomada de Cejas</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+            <a href="#detalle-gel" onclick="mostrarSeccion('detalle-gel')">
+                <img src="../img/gel.jpg" alt="Gel Fijador">
+            </a>
+            <p class="product-price">$12.000</p>
+            <p class="product-title">Gel Fijador</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+            <a href="#detalle-serum" onclick="mostrarSeccion('detalle-serum')">
+                <img src="../img/serum.jpg" alt="Serum de Cejas">
+            </a>
+            <p class="product-price">$15.000</p>
+            <p class="product-title">Serum de Cejas</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product">
+            <a href="#detalle-lapiz" onclick="mostrarSeccion('detalle-lapiz')">
+                <img src="../img/lapiz.jpg" alt="Lapiz de cejas">
+            </a>
+            <p class="product-price">$7.000</p>
+            <p class="product-title">Lapiz de Cejas</p>
+            <div class="quantity-controls">
+                <button>-</button>
+                <input type="number" value="1" min="1">
+                <button>+</button>
+            </div>
+            <div class="add-to-cart">
+                <button>🛒</button>
+            </div>
+        </div>
+
+        <!-- Detalles de los productos -->
+        <div id="detalle-pomada" class="product-detail">
+            <img src="../img/pomada.jpg" alt="Pomada de Cejas">
+            <h2>Pomada de Cejas</h2>
+            <p>Precio: $10.000</p>
+            <p>Descripción: Ideal para rellenar y definir tus cejas con precisión.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+
+        <div id="detalle-gel" class="product-detail">
+            <img src="../img/gel.jpg" alt="Gel Fijador">
+            <h2>Gel Fijador</h2>
+            <p>Precio: $12.000</p>
+            <p>Descripción: Fija tus cejas todo el día con un acabado natural.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+
+        <div id="detalle-serum" class="product-detail">
+            <img src="../img/serum.jpg" alt="Serum de Cejas">
+            <h2>Serum de Cejas</h2>
+            <p>Precio: $15.000</p>
+            <p>Descripción: Estimula el crecimiento natural de tus cejas con este serum nutritivo.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        <div id="detalle-lapiz" class="product-detail">
+            <img src="../img/lapiz.jpg" alt="Lapiz de Cejas">
+            <h2>Pomada de Cejas</h2>
+            <p>Precio: $7.000</p>
+            <p>Descripción: Ideal para rellenar y definir tus cejas con precisión.</p>
+            <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
+        </div>
+        <!-- JavaScript -->
+        <script>
+            function mostrarSeccion(id) {
+                // Ocultar todas las secciones
+                document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+                    seccion.classList.remove('active');
+                });
+
+                // Mostrar la sección seleccionada
+                document.getElementById(id).classList.add('active');
+            }
+        </script>
+
+</body>
+
+</html>
