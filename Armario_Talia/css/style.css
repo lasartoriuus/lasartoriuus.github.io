@@ -400,6 +400,7 @@ h1 {
     gap: 20px;
     text-align: center;
     font-family: Arial, sans-serif;
+    width: 100%;
  }
 
 /* Estilos para los iconos de sección */
