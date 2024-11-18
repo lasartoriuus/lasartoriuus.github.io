@@ -209,6 +209,15 @@ botonesCantidad.forEach(boton => {
         actualizarCantidad(boton);
     });
 });
+function mostrarSeccion(id) {
+                // Ocultar todas las secciones
+                document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+                    seccion.classList.remove('active');
+                });
+
+                // Mostrar la sección seleccionada
+                document.getElementById(id).classList.add('active');
+            }
         </script>
 
 </body>

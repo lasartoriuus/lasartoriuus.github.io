@@ -25,9 +25,9 @@
     </div>
     <form class="search-box" action="../views/Brochas.html" method="GET">
       <form class="search-box" action="../views/Cejas.html" method="GET">
-        <form class="search-box" action="../views/Labios.html" method="GET">
-          <form class="search-box" action="../views/Ojos.html method=" GET">
-            <form class="search-box" action="../views/Piel.html" method="GET">
+        <form class="search-box" action="./Labios.html" method="GET">
+          <form class="search-box" action="./Ojos.html" method=" GET">
+            <form class="search-box" action="./Piel.html" method="GET">
               <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
               <button type="submit" class="search-button">🔍</button>
             </form>
@@ -216,6 +216,15 @@ botonesCantidad.forEach(boton => {
         actualizarCantidad(boton);
     });
 });
+function mostrarSeccion(id) {
+                // Ocultar todas las secciones
+                document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+                    seccion.classList.remove('active');
+                });
+
+                // Mostrar la sección seleccionada
+                document.getElementById(id).classList.add('active');
+            }
   </script>
 
 </body>

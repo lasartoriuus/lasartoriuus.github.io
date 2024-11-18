@@ -177,7 +177,7 @@
         </div>
         <!-- JavaScript -->
         <script>
-           function actualizarCantidad(boton) {
+            function actualizarCantidad(boton) {
     const contenedorProducto = boton.closest('.product');
     const inputCantidad = contenedorProducto.querySelector('input');
     const precioUnitario = parseFloat(contenedorProducto.querySelector('.product-price').textContent.replace('$', '')); // Extraer precio unitario
@@ -204,6 +204,15 @@ botonesCantidad.forEach(boton => {
         actualizarCantidad(boton);
     });
 });
+            function mostrarSeccion(id) {
+                // Ocultar todas las secciones
+                document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+                    seccion.classList.remove('active');
+                });
+
+                // Mostrar la sección seleccionada
+                document.getElementById(id).classList.add('active');
+            }
         </script>
 
 </body>
