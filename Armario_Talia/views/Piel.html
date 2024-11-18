@@ -35,9 +35,11 @@
             <form class="search-box" action="./views/Brochas.html" method="GET">   
                 <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
                 <button type="submit" class="search-button">🔍</button>
-            </form>
-            <a class="estilos-icono" href="../login.html"><img src="../img/inicio.jpg" alt="Icono de inicio" width="30 "
-                height="30"></a>
+                </form>
+                <div class="user-info">
+                    <span id="user-name"></span>
+                    <img id="logout-icon" src="../img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30" title="Cerrar sesión">
+                </div>    
     </div>
 </body>
 
@@ -211,6 +213,29 @@ function mostrarSeccion(id) {
                 // Mostrar la sección seleccionada
                 document.getElementById(id).classList.add('active');
             }
+            /* loggin*/
+             // Simula la recuperación del usuario después del login
+             const username = localStorage.getItem('username'); // Nombre guardado después de iniciar sesión
+                    const userNameSpan = document.getElementById('user-name');
+                    const logoutIcon = document.getElementById('logout-icon');
+
+                    const usuario = JSON.parse(localStorage.getItem('usuario'));
+                
+                    // Si hay un usuario logueado, muestra su nombre e ícono
+                    if (username) {
+                        userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
+                        logoutIcon.style.display = 'inline';
+                    } else {
+                        // Si no hay usuario logueado, redirige al login
+                        window.location.href = "login.html";
+                    }
+
+                
+    // Lógica para cerrar sesión
+    logoutIcon.addEventListener('click', () => {
+        localStorage.removeItem('username'); // Elimina el usuario guardado
+        window.location.href = "login.html"; // Redirige al login
+    });
     </script>
 
 </body>

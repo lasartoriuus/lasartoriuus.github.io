@@ -548,7 +548,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .product-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -628,19 +627,19 @@ body {
     gap: 20px;
 }
 
-/* Pixeles */
-@media (max-width: 480px) {
-}
 
-    body {
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: -10%;
+        width: 60%;
     }
     
-  @media (min-width: 1368px) {
-  } 
-    body {
-      font-size: 18px;
+    .user-info img {
+        margin-left: 10px;
+        cursor: pointer;
     }
-  
+    
+    

@@ -23,9 +23,8 @@
     <div style="display: flex; margin-top: -10px;">
         <a href="../index.html">
             <img style="margin-top: -10px;" src="../img/logo.png" alt="Logo de la página" width="160" height="110">
-        
-        </a
-      </a>
+
+        </a </a>
         <div class="search-container">
         </div>
         <form class="search-box" action="./views/Labios.html" method="GET">
@@ -37,8 +36,12 @@
                                 required>
                             <button type="submit" class="search-button">🔍</button>
                         </form>
-                        <a class="estilos-icono" href="../login.html"><img src="../img/inicio.jpg" alt="Icono de inicio"
-                                width="30 " height="30"></a>
+                        <div class="user-info">
+                            <span id="user-name"></span>
+                            <img id="logout-icon" src="../img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30" title="Cerrar sesión">
+                        </div>    
+
+
     </div>
 </body>
 
@@ -187,33 +190,33 @@
         <!-- JavaScript -->
         <script>
             function actualizarCantidad(boton) {
-    const contenedorProducto = boton.closest('.product');
-    const inputCantidad = contenedorProducto.querySelector('input');
-    const precioUnitario = parseFloat(contenedorProducto.querySelector('.product-price').textContent.replace('$', '')); // Extraer precio unitario
-    const precioTotalElement = contenedorProducto.querySelector('.precio-total'); // Suponiendo que tienes un elemento con esta clase
+                const contenedorProducto = boton.closest('.product');
+                const inputCantidad = contenedorProducto.querySelector('input');
+                const precioUnitario = parseFloat(contenedorProducto.querySelector('.product-price').textContent.replace('$', '')); // Extraer precio unitario
+                const precioTotalElement = contenedorProducto.querySelector('.precio-total'); // Suponiendo que tienes un elemento con esta clase
 
-    let valorActual = parseInt(inputCantidad.value);
+                let valorActual = parseInt(inputCantidad.value);
 
-    if (boton.textContent === '+') {
-        valorActual++;
-    } else if (boton.textContent === '-') {
-        valorActual = Math.max(valorActual - 1, 1); // Asegurar valor mínimo de 1
-    }
+                if (boton.textContent === '+') {
+                    valorActual++;
+                } else if (boton.textContent === '-') {
+                    valorActual = Math.max(valorActual - 1, 1); // Asegurar valor mínimo de 1
+                }
 
-    inputCantidad.value = valorActual;
-    precioTotalElement.textContent = `$ ${valorActual * precioUnitario}`;
-}
+                inputCantidad.value = valorActual;
+                precioTotalElement.textContent = `$ ${valorActual * precioUnitario}`;
+            }
 
-// Seleccionar todos los botones de cantidad
-const botonesCantidad = document.querySelectorAll('.quantity-controls button');
+            // Seleccionar todos los botones de cantidad
+            const botonesCantidad = document.querySelectorAll('.quantity-controls button');
 
-// Agregar un event listener a cada botón
-botonesCantidad.forEach(boton => {
-    boton.addEventListener('click', () => {
-        actualizarCantidad(boton);
-    });
-});
-function mostrarSeccion(id) {
+            // Agregar un event listener a cada botón
+            botonesCantidad.forEach(boton => {
+                boton.addEventListener('click', () => {
+                    actualizarCantidad(boton);
+                });
+            });
+            function mostrarSeccion(id) {
                 // Ocultar todas las secciones
                 document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
                     seccion.classList.remove('active');
@@ -222,45 +225,70 @@ function mostrarSeccion(id) {
                 // Mostrar la sección seleccionada
                 document.getElementById(id).classList.add('active');
             }
+
+            /* LOGGIN */
+             // Simula la recuperación del usuario después del login
+             const username = localStorage.getItem('username'); // Nombre guardado después de iniciar sesión
+                    const userNameSpan = document.getElementById('user-name');
+                    const logoutIcon = document.getElementById('logout-icon');
+
+                    const usuario = JSON.parse(localStorage.getItem('usuario'));
+                
+                    // Si hay un usuario logueado, muestra su nombre e ícono
+                    if (username) {
+                        userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
+                        logoutIcon.style.display = 'inline';
+                    } else {
+                        // Si no hay usuario logueado, redirige al login
+                        window.location.href = "login.html";
+                    }
+
+                
+    // Lógica para cerrar sesión
+    logoutIcon.addEventListener('click', () => {
+        localStorage.removeItem('username'); // Elimina el usuario guardado
+        window.location.href = "login.html"; // Redirige al login
+    });
         </script>
 
 </body>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer de Información</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer de Información</title>
 </head>
 
 <body>
-  <footer class="footer">
-    <!-- Sección de Mi Cuenta -->
-    <div class="section">
-      <div class="section-icon">👤</div>
-      <h3>Mi cuenta</h3>
-      <ul>
-        <li><a href="#">Carrito</a></li>
+    <footer class="footer">
+        <!-- Sección de Mi Cuenta -->
+        <div class="section">
+            <div class="section-icon">👤</div>
+            <h3>Mi cuenta</h3>
+            <ul>
+                <li><a href="#">Carrito</a></li>
 
-        <li><a href="../login.html" </a>Inicio de Sesion </li>
-        <li><a href="#">Actualiza tus datos</a></li>
-      </ul>
-    </div>
+                <li><a href="../login.html" </a>Inicio de Sesion </li>
+                <li><a href="#">Actualiza tus datos</a></li>
+            </ul>
+        </div>
 
-    <!-- Sección de Redes Sociales -->
-    <div class="section">
-      <div class="section-icon"></div>
-      <h3>Redes Sociales</h3>
-      <div class="social-logos">
-        <a href="https://www.instagram.com" target="_blank"><img src="../img/instaa.jpg" alt="Instagram"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="../img/tw.jpg" alt="Twitter"></a>
-      </div>
-    </div>
+        <!-- Sección de Redes Sociales -->
+        <div class="section">
+            <div class="section-icon"></div>
+            <h3>Redes Sociales</h3>
+            <div class="social-logos">
+                <a href="https://www.instagram.com" target="_blank"><img src="../img/instaa.jpg" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="../img/tw.jpg" alt="Twitter"></a>
+            </div>
+        </div>
 
-    <!-- Sección de Medios de Pago -->
-    <div class="section">
-      <h3>Medios de pago</h3>
-      <div class="payment-logos">
-        <img src="../img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
-        <img src="../img/nequi.jpg" alt="Nequi" width="15%" height="15%">
+        <!-- Sección de Medios de Pago -->
+        <div class="section">
+            <h3>Medios de pago</h3>
+            <div class="payment-logos">
+                <img src="../img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
+                <img src="../img/nequi.jpg" alt="Nequi" width="15%" height="15%">
+
 </html>
