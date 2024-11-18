@@ -51,7 +51,7 @@
 <div id="productos" class="product-gallery active">
     <!-- Producto 1 -->
     <div class="product">
-        <a href="#detalle-corrector" onclick="mostrarSeccion('detalle-corrector')">
+        <a href="#detalle-correcto" onclick="mostrarSeccion('detalle-corrector')">
             <img src="../img/corrector.jpg" alt="corrector">
         </a>
         <p class="product-price">$15.000</p>
@@ -132,7 +132,7 @@
         </div>
     </div>
     <!-- Detalles de los productos -->
-    <div id="detalle-sombra" class="product-detail">
+    <div id="detalle-corrector" class="product-detail">
         <img src="../img/corrector.jpg" alt="Corrector de Ojos" width="60%" height="60%">
          <h2>Correcto de ojos loquido </h2>
         <p>Precio: $15.000</p>
@@ -171,15 +171,33 @@
     </div>
     <!-- JavaScript -->
     <script>
-        function mostrarSeccion(id) {
-            // Ocultar todas las secciones
-            document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
-                seccion.classList.remove('active');
-            });
+        function actualizarCantidad(boton) {
+    const contenedorProducto = boton.closest('.product');
+    const inputCantidad = contenedorProducto.querySelector('input');
+    const precioUnitario = parseFloat(contenedorProducto.querySelector('.product-price').textContent.replace('$', '')); // Extraer precio unitario
+    const precioTotalElement = contenedorProducto.querySelector('.precio-total'); // Suponiendo que tienes un elemento con esta clase
 
-            // Mostrar la sección seleccionada
-            document.getElementById(id).classList.add('active');
-        }
+    let valorActual = parseInt(inputCantidad.value);
+
+    if (boton.textContent === '+') {
+        valorActual++;
+    } else if (boton.textContent === '-') {
+        valorActual = Math.max(valorActual - 1, 1); // Asegurar valor mínimo de 1
+    }
+
+    inputCantidad.value = valorActual;
+    precioTotalElement.textContent = `$ ${valorActual * precioUnitario}`;
+}
+
+// Seleccionar todos los botones de cantidad
+const botonesCantidad = document.querySelectorAll('.quantity-controls button');
+
+// Agregar un event listener a cada botón
+botonesCantidad.forEach(boton => {
+    boton.addEventListener('click', () => {
+        actualizarCantidad(boton);
+    });
+});
     </script>
 
 </body>
