@@ -1,0 +1,29 @@
+/*Estilos Login*/
+.body-login {
+    background-image: url('../img/loginnn.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.login-box {
+
+    width: 300px;
+    margin: 140px auto;
+    padding: 30px;
+    background-color: rgba(255, 0, 76, 0.071);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(6, 6, 6, 0.974);
+
+
+}
+
+.login-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.style-text {
+    margin-bottom: -10%;
+}
