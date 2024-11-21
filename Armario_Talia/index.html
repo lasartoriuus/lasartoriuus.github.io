@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Talia</title>
+    <link rel="stylesheet " href="css\style.css">
     <link rel="stylesheet " href="./css/index.css">
     <link rel="icon" href="./img/logo.png">
 
@@ -35,7 +32,8 @@
                 <button type="submit" class="search-button">🔍</button>
             </form>
             <div class="user-info">
-                <span id="user-name">Bienvenido, Talia!</span>
+                <span id="user-name"></span>
+                <span id="user-name"></span>
                 <img id="logout-icon" src="./img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30" title="Cerrar sesión">
             </div>              
     </div>
@@ -204,9 +202,10 @@
                     const logoutIcon = document.getElementById('logout-icon');
 
                     const usuario = JSON.parse(localStorage.getItem('usuario'));
-                
+
                     // Si hay un usuario logueado, muestra su nombre e ícono
                     if (username) {
+                        userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
                         userNameSpan.textContent = `Hola, ${usuario.nombre}!`;
                         logoutIcon.style.display = 'inline';
                     } else {
@@ -214,7 +213,7 @@
                         window.location.href = "login.html";
                     }
 
-                
+
     // Lógica para cerrar sesión
     logoutIcon.addEventListener('click', () => {
         localStorage.removeItem('username'); // Elimina el usuario guardado
@@ -223,4 +222,3 @@
 
 
 </script>
-                
