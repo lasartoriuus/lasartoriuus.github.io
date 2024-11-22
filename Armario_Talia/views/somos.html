@@ -46,19 +46,19 @@
     <br>
     <br>
     <nav style="margin-top: 30px;">
-        <a class="bebas-neue-regular" href="./views/Brochas.html">Brochas</a>
-        <a class="bebas-neue-regular" href="./views/Labios.html">Labios</a>
-        <a class="bebas-neue-regular" href="./views/Ojos.html">Ojos</a>
-        <a class="bebas-neue-regular" href="./views/Piel.html">Piel</a>
-        <a class="bebas-neue-regular" href="./views/Cejas.html">Cejas</a>
-        <a class="bebas-neue-regular" href="./views/somos.html">Somos</a>
+        <a class="bebas-neue-regular" href="./Brochas.html">Brochas</a>
+        <a class="bebas-neue-regular" href="./Labios.html">Labios</a>
+        <a class="bebas-neue-regular" href="./Ojos.html">Ojos</a>
+        <a class="bebas-neue-regular" href="./Piel.html">Piel</a>
+        <a class="bebas-neue-regular" href="./Cejas.html">Cejas</a>
+        <a class="bebas-neue-regular" href="./somos.html">Somos</a>
     </nav>
 </div>
 <section id="quienes-somos">
     <div class="somos-container">
       <h2>Quiénes Somos</h2>
       <p>
-        **Beauty Talia: Más que maquillaje, una pasión.**
+        Beauty Talia: Más que maquillaje, una pasión.
       </p>
       <p>
         Nacemos de un sueño, de la ilusión de compartir nuestra pasión por la belleza. 
@@ -72,6 +72,69 @@
         Únete a nuestra comunidad de belleza y déjanos ser parte de tu rutina diaria. 
         Porque en Beauty Talia, creemos que la belleza es un arte, y tú eres el lienzo perfecto.
       </p>
+
       <img src="../img/somos.jpg" alt="Imagen de equipo Beauty Talia">
     </div>
   </section>
+  <body>
+    <footer class="footer">
+      <!-- Sección de Mi Cuenta -->
+      <div class="section">
+        <div class="section-icon">👤</div>
+        <h3>Mi cuenta</h3>
+        <ul>
+          <li><a href="#">Carrito</a></li>
+  
+          <li><a href="../login.html" </a>Inicio de Sesion </li>
+          <li><a href="#">Actualiza tus datos</a></li>
+        </ul>
+      </div>
+  
+      <!-- Sección de Redes Sociales -->
+      <div class="section">
+        <div class="section-icon"></div>
+        <h3>Redes Sociales</h3>
+        <div class="social-logos">
+          <a href="https://www.instagram.com" target="_blank"><img src="../img/instaa.jpg" alt="Instagram"></a>
+          <a href="https://www.twitter.com" target="_blank"><img src="../img/tw.jpg" alt="Twitter"></a>
+        </div>
+      </div>
+      <!-- Sección de Medios de Pago -->
+      <div class="section">
+        <h3>Medios de pago</h3>
+        <div class="payment-logos">
+          <img src="../img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
+        </div>
+      </div>
+    </footer>
+  </body>
+  
+  <script>
+    const username = localStorage.getItem('username');
+const userNameSpan = document.getElementById('user-name');
+const logoutIcon = document.getElementById('logout-icon');
+
+// Función para mostrar el saludo al usuario
+function mostrarSaludo(usuario) {
+  if (usuario && usuario.nombre) {
+    userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
+    logoutIcon.style.display = 'inline';
+  } else {
+    console.error('Error: No se pudo obtener el nombre del usuario.');
+  }
+}
+
+// Función para cerrar sesión
+function cerrarSesion() {
+  localStorage.removeItem('username');
+  window.location.href = "../login.html";
+}
+
+// Recuperar y mostrar el usuario (si existe)
+const usuario = JSON.parse(localStorage.getItem('usuario'));
+mostrarSaludo(usuario);
+
+// Agregar evento de clic al ícono de cierre de sesión
+logoutIcon.addEventListener('click', cerrarSesion);
+  </script>
+  
