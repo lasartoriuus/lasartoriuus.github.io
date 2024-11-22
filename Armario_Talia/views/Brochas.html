@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beauty Talia- Brochas</title>
-  <link rel="stylesheet " href="../css/vistas.css">
+  <title>Beauty Talia- Cejas</title>
   <link rel="stylesheet " href="../css/index.css">
+  <link rel="stylesheet " href="../css/vistas.css">
   <link rel="icon" href="../img/logo.png">
 
 </html>
@@ -18,6 +18,7 @@
 <!-- Menu de navegacion -->
 
 <body>
+
   <section id="../login.html">
   </section>
   <div style="display: flex; margin-top: -10px;">
@@ -25,24 +26,23 @@
       <img style="margin-top: -10px;" src="../img/logo.png" alt="Logo de la página" width="160" height="110">
 
     </a </a>
-    </a>
     <div class="search-container">
     </div>
-    <form class="search-box" action="../views/Brochas.html" method="GET">
-      <form class="search-box" action="../views/Cejas.html" method="GET">
-        <form class="search-box" action="./Labios.html" method="GET">
-          <form class="search-box" action="./Ojos.html" method=" GET">
-            <form class="search-box" action="./Piel.html" method="GET">
+    <form class="search-box" action="./views/Labios.html" method="GET">
+      <form class="search-box" action="./views/Cejas.html" method="GET">
+        <form class="search-box" action="./views/Ojos.html" method="GET">
+          <form class="search-box" action="./views/Piel.html" method="GET">
+            <form class="search-box" action="./views/Brochas.html" method="GET">
               <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
               <button type="submit" class="search-button">🔍</button>
             </form>
-            <a class="estilos-icono" href="../login.html"><img src="../img/inicio.jpg" alt="Icono de inicio" width="30 "
-                height="30"></a>
-              </form>
-              <div class="user-info">
-                <span id="user-name"></span>
-                <img id="logout-icon" src="../img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30" title="Cerrar sesión">
-            </div>       
+            <div class="user-info">
+              <span id="user-name"></span>
+              <img id="logout-icon" src="../img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30"
+                title="Cerrar sesión">
+            </div>
+
+
   </div>
 </body>
 
@@ -58,16 +58,6 @@
   </nav>
 </div>
 </div>
-
-<head>
-  <title>Productos</title>
-</head>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos</title>
-</head>
 
 <body>
 
@@ -198,68 +188,6 @@
       <p>Descripción: Brocha pequeña + Beautyblender</p>
       <button class="back-button" onclick="mostrarSeccion('productos')">Volver a Productos</button>
     </div>
-    <!-- JavaScript -->
-    <script>
-      function actualizarCantidad(boton) {
-        const contenedorProducto = boton.closest('.product');
-        const inputCantidad = contenedorProducto.querySelector('input');
-        const precioUnitario = parseFloat(contenedorProducto.querySelector('.product-price').textContent.replace('$', '')); // Extraer precio unitario
-        const precioTotalElement = contenedorProducto.querySelector('.precio-total'); // Suponiendo que tienes un elemento con esta clase
-
-        let valorActual = parseInt(inputCantidad.value);
-
-        if (boton.textContent === '+') {
-          valorActual++;
-        } else if (boton.textContent === '-') {
-          valorActual = Math.max(valorActual - 1, 1); // Asegurar valor mínimo de 1
-        }
-
-        inputCantidad.value = valorActual;
-        precioTotalElement.textContent = `$ ${valorActual * precioUnitario}`;
-      }
-
-      // Seleccionar todos los botones de cantidad
-      const botonesCantidad = document.querySelectorAll('.quantity-controls button');
-
-      // Agregar un event listener a cada botón
-      botonesCantidad.forEach(boton => {
-        boton.addEventListener('click', () => {
-          actualizarCantidad(boton);
-        });
-      });
-      function mostrarSeccion(id) {
-        // Ocultar todas las secciones
-        document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
-          seccion.classList.remove('active');
-        });
-
-        // Mostrar la sección seleccionada
-        document.getElementById(id).classList.add('active');
-      }
-      
-      /*loggin*/
-       // Simula la recuperación del usuario después del login
-       const username = localStorage.getItem('username'); // Nombre guardado después de iniciar sesión
-                    const userNameSpan = document.getElementById('user-name');
-                    const logoutIcon = document.getElementById('logout-icon');
-                    const usuario = JSON.parse(localStorage.getItem('usuario'));
-                
-                    // Si hay un usuario logueado, muestra su nombre e ícono
-                    if (username) {
-                        userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
-                        logoutIcon.style.display = 'inline';
-                    } else {
-                        // Si no hay usuario logueado, redirige al login
-                        window.location.href = "login.html";
-                    }
-                
-    // Lógica para cerrar sesión
-    logoutIcon.addEventListener('click', () => {
-        localStorage.removeItem('username'); // Elimina el usuario guardado
-        window.location.href = "login.html"; // Redirige al login
-    });
-    </script>
-
 </body>
 
 </html>
@@ -301,3 +229,71 @@
       <h3>Medios de pago</h3>
       <div class="payment-logos">
         <img src="../img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
+
+        <!-- JavaScript -->
+    <script>
+      function actualizarCantidad(boton) {
+        const contenedorProducto = boton.closest('.product');
+        const inputCantidad = contenedorProducto.querySelector('input');
+        const precioUnitario = parseFloat(contenedorProducto.querySelector('.product-price').textContent.replace('$', '')); // Extraer precio unitario
+        const precioTotalElement = contenedorProducto.querySelector('.precio-total'); // Suponiendo que tienes un elemento con esta clase
+
+        let valorActual = parseInt(inputCantidad.value);
+
+        if (boton.textContent === '+') {
+          valorActual++;
+        } else if (boton.textContent === '-') {
+          valorActual = Math.max(valorActual - 1, 1); // Asegurar valor mínimo de 1
+        }
+
+        inputCantidad.value = valorActual;
+        precioTotalElement.textContent = `$ ${valorActual * precioUnitario}`;
+      }
+
+      // Seleccionar todos los botones de cantidad
+      const botonesCantidad = document.querySelectorAll('.quantity-controls button');
+
+      // Agregar un event listener a cada botón
+      botonesCantidad.forEach(boton => {
+        boton.addEventListener('click', () => {
+          actualizarCantidad(boton);
+        });
+      });
+      function mostrarSeccion(id) {
+        // Ocultar todas las secciones
+        document.querySelectorAll('.product-gallery, .product-detail').forEach(seccion => {
+          seccion.classList.remove('active');
+        });
+
+        // Mostrar la sección seleccionada
+        document.getElementById(id).classList.add('active');
+      }
+
+      /*loggin*/
+      const username = localStorage.getItem('username');
+const userNameSpan = document.getElementById('user-name');
+const logoutIcon = document.getElementById('logout-icon');
+
+// Función para mostrar el saludo al usuario
+function mostrarSaludo(usuario) {
+  if (usuario && usuario.nombre) {
+    userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
+    logoutIcon.style.display = 'inline';
+  } else {
+    console.error('Error: No se pudo obtener el nombre del usuario.');
+  }
+}
+
+// Función para cerrar sesión
+function cerrarSesion() {
+  localStorage.removeItem('username');
+  window.location.href = "login.html";
+}
+
+// Recuperar y mostrar el usuario (si existe)
+const usuario = JSON.parse(localStorage.getItem('usuario'));
+mostrarSaludo(usuario);
+
+// Agregar evento de clic al ícono de cierre de sesión
+logoutIcon.addEventListener('click', cerrarSesion);
+    </script>
