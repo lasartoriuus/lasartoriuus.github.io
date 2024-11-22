@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beauty Talia- Brochas</title>
   <link rel="stylesheet " href="../css/vistas.css">
+  <link rel="stylesheet " href="../css/index.css">
   <link rel="icon" href="../img/logo.png">
-  <link rel="stylesheet"  href="../css/index.css"
 
 </html>
 <div class="banner">
@@ -24,6 +24,7 @@
     <a href="../index.html">
       <img style="margin-top: -10px;" src="../img/logo.png" alt="Logo de la página" width="160" height="110">
 
+    </a </a>
     </a>
     <div class="search-container">
     </div>
@@ -34,6 +35,9 @@
             <form class="search-box" action="./Piel.html" method="GET">
               <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
               <button type="submit" class="search-button">🔍</button>
+            </form>
+            <a class="estilos-icono" href="../login.html"><img src="../img/inicio.jpg" alt="Icono de inicio" width="30 "
+                height="30"></a>
               </form>
               <div class="user-info">
                 <span id="user-name"></span>
@@ -238,7 +242,6 @@
        const username = localStorage.getItem('username'); // Nombre guardado después de iniciar sesión
                     const userNameSpan = document.getElementById('user-name');
                     const logoutIcon = document.getElementById('logout-icon');
-
                     const usuario = JSON.parse(localStorage.getItem('usuario'));
                 
                     // Si hay un usuario logueado, muestra su nombre e ícono
@@ -249,14 +252,12 @@
                         // Si no hay usuario logueado, redirige al login
                         window.location.href = "login.html";
                     }
-
                 
     // Lógica para cerrar sesión
     logoutIcon.addEventListener('click', () => {
         localStorage.removeItem('username'); // Elimina el usuario guardado
         window.location.href = "login.html"; // Redirige al login
     });
-
     </script>
 
 </body>
@@ -300,4 +301,3 @@
       <h3>Medios de pago</h3>
       <div class="payment-logos">
         <img src="../img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
-        <img src="../img/nequi.jpg" alt="Nequi" width="15%" height="15%">
