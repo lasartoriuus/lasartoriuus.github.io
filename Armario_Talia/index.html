@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Talia</title>
-    <link rel="stylesheet " href="css\style.css">
-    <link rel="stylesheet " href="./css/index.css">
-    <link rel="icon" href="./img/logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Talia</title>
+<link rel="stylesheet " href="css\style.css">
+<link rel="stylesheet " href="./css/index.css">
+<link rel="icon" href="./img/logo.png">
 
 </html>
 <div class="banner">
@@ -20,22 +20,24 @@
     <div style="display: flex; margin-top: -10px;">
         <a href="index.html">
             <img style="margin-top: -10px;" src="./img/logo.png" alt="Logo de la página" width="160" height="110">
-    </a>
-            <div class="search-container">
-            </div>
-            <form class="search-box" action="./views/Labios.html" method="GET">
-            <form class="search-box" action="./views/Cejas.html" method="GET">  
-            <form class="search-box" action="./views/Ojos.html" method="GET">
-            <form class="search-box" action="./views/Piel.html" method="GET">
-            <form class="search-box" action="./views/Brochas.html" method="GET">   
-                <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
-                <button type="submit" class="search-button">🔍</button>
-            </form>
-            <div class="user-info">
-                <span id="user-name"></span>
-                <span id="user-name"></span>
-                <img id="logout-icon" src="./img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30" title="Cerrar sesión">
-            </div>              
+        </a>
+        <div class="search-container">
+        </div>
+        <form class="search-box" action="./views/Labios.html" method="GET">
+            <form class="search-box" action="./views/Cejas.html" method="GET">
+                <form class="search-box" action="./views/Ojos.html" method="GET">
+                    <form class="search-box" action="./views/Piel.html" method="GET">
+                        <form class="search-box" action="./views/Brochas.html" method="GET">
+                            <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?"
+                                required>
+                            <button type="submit" class="search-button">🔍</button>
+                        </form>
+                        <div class="user-info">
+                            <span id="user-name"></span>
+                            <span id="user-name"></span>
+                            <img id="logout-icon" src="./img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30"
+                                title="Cerrar sesión">
+                        </div>
     </div>
 </body>
 
@@ -43,11 +45,11 @@
     <br>
     <br>
     <nav style="margin-top: 30px;">
-        <a class="bebas-neue-regular" href="views\Brochas.html">Brochas</a>
-        <a class="bebas-neue-regular"  href="views\Labios.html">Labios</a>
-        <a class="bebas-neue-regular"  href="views\Ojos.html">Ojos</a>
-        <a class="bebas-neue-regular"  href="views\Piel.html">Piel</a>
-        <a class="bebas-neue-regular"  href="views\Cejas.html">Cejas</a>
+        <a class="bebas-neue-regular" href="./views/Brochas.html">Brochas</a>
+        <a class="bebas-neue-regular" href="./views/Labios.html">Labios</a>
+        <a class="bebas-neue-regular" href="./views/Ojos.html">Ojos</a>
+        <a class="bebas-neue-regular" href="./views/Piel.html">Piel</a>
+        <a class="bebas-neue-regular" href="./views/Cejas.html">Cejas</a>
     </nav>
 </div>
 </div>
@@ -195,30 +197,33 @@
                 <img src="./img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
                 <img src="./img/nequi.jpg" alt="Nequi" width="15%" height="15%">
 
+                
                 <script>
-                    // Simula la recuperación del usuario después del login
-                    const username = localStorage.getItem('username'); // Nombre guardado después de iniciar sesión
-                    const userNameSpan = document.getElementById('user-name');
-                    const logoutIcon = document.getElementById('logout-icon');
+                   // Simula la recuperación del usuario después del login
+const username = localStorage.getItem('username');
+const userNameSpan = document.getElementById('user-name');
+const logoutIcon = document.getElementById('logout-icon');
 
-                    const usuario = JSON.parse(localStorage.getItem('usuario'));
+// Función para mostrar el saludo al usuario
+function mostrarSaludo(usuario) {
+  if (usuario && usuario.nombre) {
+    userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
+    logoutIcon.style.display = 'inline';
+  } else {
+    console.error('Error: No se pudo obtener el nombre del usuario.');
+  }
+}
 
-                    // Si hay un usuario logueado, muestra su nombre e ícono
-                    if (username) {
-                        userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
-                        userNameSpan.textContent = `Hola, ${usuario.nombre}!`;
-                        logoutIcon.style.display = 'inline';
-                    } else {
-                        // Si no hay usuario logueado, redirige al login
-                        window.location.href = "login.html";
-                    }
+// Función para cerrar sesión
+function cerrarSesion() {
+  localStorage.removeItem('username');
+  window.location.href = "login.html";
+}
 
+// Recuperar y mostrar el usuario (si existe)
+const usuario = JSON.parse(localStorage.getItem('usuario'));
+mostrarSaludo(usuario);
 
-    // Lógica para cerrar sesión
-    logoutIcon.addEventListener('click', () => {
-        localStorage.removeItem('username'); // Elimina el usuario guardado
-        window.location.href = "login.html"; // Redirige al login
-    });
-
-
-</script>
+// Agregar evento de clic al ícono de cierre de sesión
+logoutIcon.addEventListener('click', cerrarSesion);
+                </script>
