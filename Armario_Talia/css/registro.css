@@ -12,10 +12,10 @@ body {
 
 .form-registro {
     background-color: rgba(255, 0, 64, 0.209);
-    padding: 20px;
+    padding: 40px;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(191, 35, 35, 0.3);
-    width: 90%; /* Cambiado a 90% para pantallas pequeñas */
+    width: 100%; /* Cambiado a 90% para pantallas pequeñas */
     max-width: 400px; /* Ancho máximo para pantallas grandes */
     margin: auto; /* Centrar el formulario */
 }
