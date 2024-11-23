@@ -1,75 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
-  <link rel="stylesheet" href="./css/registro.css">
-  <link rel="icon" href="./img/logo.png">
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./css/registro.css">
+    <link rel="icon" href ="./img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<body class="body-registro">
 <body>
-  <h1 class="titulo">Registro</h1>
-  <form class="formulario" id="registroForm">
-    <div class="campo">
-      <label class="etiqueta" for="nombre">Nombre:</label>
-      <input class="entrada" type="text" id="nombre" name="nombre" required>
-    </div>
+    <h1>Registro</h1>
+    <form class="form-registro" id="registroForm">
+        <label class="label-registro" for="nombre">Nombre:</label>
+        <input class="input-registro" type="text" id="nombre" name="nombre" required>
 
-    <div class="campo">
-      <label class="etiqueta" for="apellido">Apellido:</label>
-      <input class="entrada" type="text" id="apellido" name="apellido" required>
-    </div>
+        <label class="label-registro" for="apellido">Apellido:</label>
+        <input class="input-registro" type="text" id="apellido" name="apellido" required>
 
-    <div class="campo">
-      <label class="etiqueta" for="email">Correo Electrónico:</label>
-      <input class="entrada" type="email" id="email" name="email" required>
-    </div>
+        <label class="label-registro" for="email">Correo Electrónico:</label>
+        <input class="input-registro" type="email" id="email" name="email" required>
 
-    <div class="campo">
-      <label class="etiqueta" for="password">Contraseña:</label>
-      <input class="entrada" type="password" id="password" name="password" required>
-    </div>
+        <label class="label-registro" for="password">Contraseña:</label>
+        <input class="input-registro"type="password" id="password" name="password" required>
 
-    <div class="campo">
-      <label class="etiqueta" for="genero">Género:</label>
-      <select id="genero" name="genero" required>
-        <option value="masculino">Masculino</option>
-        <option value="femenino">Femenino</option>
-        <option value="otro">Otro</option>
-      </select>
-    </div>
+        <label class="label-registro"  for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select>
 
-    <div class="botones">
-      <button type="submit">Registrarse</button>
-      <button type="button" onclick="window.open('login.html', '_blank')">Iniciar Sesión</button>
-    </div>
-  </form>
+        <button type="submit">Registrarse</button>
+        <button type="button" onclick="window.open('login.html', '_blank')">Iniciar Sesión</button>
+    </form>
 
-  <script>
-    const formulario = document.getElementById('registroForm');
+    <script>
+        const formulario = document.getElementById('registroForm');
 
-    formulario.addEventListener('submit', (event) => {
-      event.preventDefault();
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
 
-      const nombre = document.getElementById('nombre').value;
-      const apellido = document.getElementById('apellido').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const genero = document.getElementById('genero').value;
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const genero = document.getElementById('genero').value;
 
-      // Almacenar los datos en el localStorage
-      localStorage.setItem('usuario', JSON.stringify({
-        nombre,
-        apellido,
-        email,
-        password,
-        genero
-      }));
+            // Almacenar los datos en el localStorage
+            localStorage.setItem('usuario', JSON.stringify({
+                nombre,
+                apellido,
+                email,
+                password,
+                genero
+            }));
 
-      // Redirigir a la página de inicio de sesión
-      window.location.href = 'login.html'; // Reemplaza 'login.html' con el nombre de tu página de inicio de sesión
-    });
-  </script>
+            // Redirigir a la página de inicio de sesión
+            window.location.href = 'login.html'; // Reemplaza 'login.html' con el nombre de tu página de inicio de sesión
+        });
+    </script>
 </body>
 </html>
 
