@@ -1,50 +1,39 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beauty Talia</title>
-<link rel="stylesheet " href="css\style.css">
-<link rel="stylesheet " href="./css/index.css">
-<link rel="icon" href="./img/logo.png">
-
-</html>
-<div class="banner">
-    Envíos GRATIS para compras superiores a $100.000. ¡Encuentra lo que necesitas al mejor precio!
-</div>
-<br>
-<div style="margin-top: 15px;"></div>
-<!-- Menu de navegacion -->
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Talia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./img/logo.png">
+</head>
 <body>
+    <div class="banner">
+        Envíos GRATIS para compras superiores a $100.000. ¡Encuentra lo que necesitas al mejor precio!
+    </div>
 
-    <section id="../login.html">
-    </section>
-    <div style="display: flex; margin-top: -10px;">
+    <div style="margin-top: 15px;"></div>
+
+    <!-- Menú de navegación -->
+    <div style="display: flex; margin-top: -10px; justify-content: space-between; align-items: center;">
         <a href="index.html">
-            <img style="margin-top: -10px;" src="./img/logo.png" alt="Logo de la página" width="160" height="110">
+            <img src="./img/logo.png" alt="Logo de la página" width="160" height="110">
         </a>
         <div class="search-container">
+            <form class="search-box" action="./views/Labios.html" method="GET">
+            <form class="search-box" action="./views/Brochas.html" method="GET">
+                <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?" required>
+              <button type="submit" class="search-button">🔍</button>
+            </form>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <img id="logout-icon" src="./img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30" title="Cerrar sesión">
+            </div>
         </div>
-        <form class="search-box" action="./views/Labios.html" method="GET">
-            <form class="search-box" action="./views/Cejas.html" method="GET">
-                <form class="search-box" action="./views/Ojos.html" method="GET">
-                    <form class="search-box" action="./views/Piel.html" method="GET">
-                        <form class="search-box" action="./views/Brochas.html" method="GET">
-                            <input type="text" name="query" class="search-input" placeholder="¿Qué estás buscando?"
-                                required>
-                            <button type="submit" class="search-button">🔍</button>
-                        </form>
-                        <div class="user-info">
-                            <span id="user-name"></span>
-                            <span id="user-name"></span>
-                            <img id="logout-icon" src="./img/cerrar.jpg" alt="Cerrar sesión" width="30" height="30"
-                                title="Cerrar sesión">
-                        </div>
     </div>
-</body>
 
-<div style="margin-top: -45px;">
-    <br>
-    <br>
-    <nav style="margin-top: 30px;">
+    <nav style="margin-top: 30px; display: flex; justify-content: space-around;">
         <a class="bebas-neue-regular" href="./views/Brochas.html">Brochas</a>
         <a class="bebas-neue-regular" href="./views/Labios.html">Labios</a>
         <a class="bebas-neue-regular" href="./views/Ojos.html">Ojos</a>
@@ -52,59 +41,45 @@
         <a class="bebas-neue-regular" href="./views/Cejas.html">Cejas</a>
         <a class="bebas-neue-regular" href="./views/somos.html">Somos</a>
     </nav>
-</div>
-<!-- Acá viene mi carrusel -->
-<div class="slide">
-    <div class="slide-inner">
-        <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
-        <div class="slide-item">
-            <img src="./img/nueva.png">
-        </div>
-        <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-            <img src="img/nuevaa.png">
-        </div>
-        <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
-        <div class="slide-item">
-            <img src="img/nuevaaa.png">
 
+    <!-- Carrusel -->
+    <div class="slide">
+        <div class="slide-inner">
+            <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+            <div class="slide-item">
+                <img src="./img/nueva.png">
+            </div>
+            <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="img/nuevaa.png">
+            </div>
+            <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="img/nuevaaa.png">
+            </div>
+            <label for="slide-3" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3"> ‹</label>
+            <label for="slide-1" class="slide-control next control-3">›</label>
+            <ol class="slide-indicador">
+                <li>
+                    <label for="slide-1" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-2" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-3" class="slide-circulo">•</label>
+                </li>
+            </ol>
         </div>
-        <label for="slide-3" class="slide-control prev control-1">‹</label>
-        <label for="slide-2" class="slide-control next control-1">›</label>
-        <label for="slide-1" class="slide-control prev control-2">‹</label>
-        <label for="slide-3" class="slide-control next control-2">›</label>
-        <label for="slide-2" class="slide-control prev control-3">‹</label>
-        <label for="slide-1" class="slide-control next control-3">›</label>
-        <ol class="slide-indicador">
-            <li>
-                <label for="slide-1" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-2" class="slide-circulo">•</label>
-            </li>
-            <li>
-                <label for="slide-3" class="slide-circulo">•</label>
-            </li>
-        </ol>
     </div>
-</div>
-</body>
 
-</html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrusel de Categorías</title>
-</head>
-
-<body>
     <div class="carousel-container">
         <h2 class="carousel-title">Elige una categoría</h2>
-
         <button class="carousel-nav left" onclick="scrollCarousel(-1)">&#9664;</button>
-
         <div class="carousel" id="carousel">
             <div class="carousel-item">
                 <a href="./views/Brochas.html"><img src="./img/brochas.jpg" alt="Brochas"></a>
@@ -126,14 +101,36 @@
                 <a href="./views/Piel.html"><img src="./img/piel.jpg" alt="Cuidado de la piel"></a>
                 <p>Cuidado de la piel</p>
             </div>
-            <div class="carousel-item">
-            </div>
-            <div class="carousel-item">
-            </div>
         </div>
-
         <button class="carousel-nav right" onclick="scrollCarousel(1)">&#9654;</button>
     </div>
+
+    <footer class="footer">
+        <div class="section">
+            <div class="section-icon">👤</div>
+            <h3>Mi cuenta</h3>
+            <ul>
+                <li><a href="#">Carrito</a></li>
+                <li><a href="./login.html">Inicio de Sesión</a></li>
+                <li><a href="#">Actualiza tus datos</a></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>Redes Sociales</h3>
+            <div class="social-logos">
+                <a href="https://www.instagram.com" target="_blank"><img src="./img/instaa.jpg" alt="Instagram"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="./img/tw.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Medios de pago</h3>
+            <div class="payment-logos">
+                <img src="./img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
+                <img src="./img/nequi.jpg" alt="Nequi" width="15%" height="15%">
+            </div>
+        </div>
+    </footer>
+
     <script>
         const carousel = document.getElementById("carousel");
         let scrollAmount = 0;
@@ -154,75 +151,29 @@
             scrollCarousel(1);
         }
         setInterval(autoScrollCarousel, 3000);
+
+        // Simula la recuperación del usuario después del login
+        const username = localStorage.getItem('username');
+        const userNameSpan = document.getElementById('user-name');
+        const logoutIcon = document.getElementById('logout-icon');
+
+        function mostrarSaludo(usuario) {
+            if (usuario && usuario.nombre) {
+                userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
+                logoutIcon.style.display = 'inline';
+            } else {
+                console.error('Error: No se pudo obtener el nombre del usuario.');
+            }
+ }
+
+        function cerrarSesion() {
+            localStorage.removeItem('username');
+            window.location.href = "login.html";
+        }
+
+        const usuario = JSON.parse(localStorage.getItem('usuario'));
+        mostrarSaludo(usuario);
+        logoutIcon.addEventListener('click', cerrarSesion);
     </script>
 </body>
-
 </html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer de Información</title>
-</head>
-
-<body>
-    <footer class="footer">
-        <!-- Sección de Mi Cuenta -->
-        <div class="section">
-            <div class="section-icon">👤</div>
-            <h3>Mi cuenta</h3>
-            <ul>
-                <li><a href="#">Carrito</a></li>
-
-                <li><a href="./login.html" </a>Inicio de Sesion </li>
-                <li><a href="#">Actualiza tus datos</a></li>
-            </ul>
-        </div>
-
-        <!-- Sección de Redes Sociales -->
-        <div class="section">
-            <div class="section-icon"></div>
-            <h3>Redes Sociales</h3>
-            <div class="social-logos">
-                <a href="https://www.instagram.com" target="_blank"><img src="./img/instaa.jpg" alt="Instagram"></a>
-                <a href="https://www.twitter.com" target="_blank"><img src="./img/tw.jpg" alt="Twitter"></a>
-            </div>
-        </div>
-
-        <!-- Sección de Medios de Pago -->
-        <div class="section">
-            <h3>Medios de pago</h3>
-            <div class="payment-logos">
-                <img src="./img/bancolombia.jpg" alt="Bancolombia" width="15%" height="15%">
-                <img src="./img/nequi.jpg" alt="Nequi" width="15%" height="15%">
-
-                
-                <script> // Simula la recuperación del usuario después del login
-const username = localStorage.getItem('username');
-const userNameSpan = document.getElementById('user-name');
-const logoutIcon = document.getElementById('logout-icon');
-
-// Función para mostrar el saludo al usuario
-function mostrarSaludo(usuario) {
-  if (usuario && usuario.nombre) {
-    userNameSpan.textContent = `Bienvenido, ${usuario.nombre}!`;
-    logoutIcon.style.display = 'inline';
-  } else {
-    console.error('Error: No se pudo obtener el nombre del usuario.');
-  }
-}
-
-// Función para cerrar sesión
-function cerrarSesion() {
-  localStorage.removeItem('username');
-  window.location.href = "login.html";
-}
-
-// Recuperar y mostrar el usuario (si existe)
-const usuario = JSON.parse(localStorage.getItem('usuario'));
-mostrarSaludo(usuario);
-
-// Agregar evento de clic al ícono de cierre de sesión
-logoutIcon.addEventListener('click', cerrarSesion);
-</script>

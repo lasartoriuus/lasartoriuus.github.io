@@ -392,3 +392,98 @@ nav a.active {
     margin-left: 10px;
     cursor: pointer;
 }
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Cambia la dirección de los enlaces a columna */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    nav a {
+        width: auto; /* Ajusta el ancho de los enlaces */
+        padding: 10px; /* Ajusta el padding */
+    }
+
+    .search-container {
+        flex-direction: column; /* Cambia la dirección a columna para móviles */
+        align-items: center; /* Centra los elementos */
+        width: 100%; /* Asegúrate de que ocupe el 100% del ancho */
+    }
+
+    .search-input {
+        width: 80%; /* Ajusta el ancho del input */
+        margin-bottom: 10px; /* Espacio entre el input y el botón */
+    }
+
+    .carousel {
+        gap: 20px; /* Reduce el espacio entre los elementos del carrusel */
+        padding: 10px; /* Ajusta el padding del carrusel */
+    }
+
+    .carousel-item img {
+        width: 100px; /* Ajusta el tamaño de las imágenes en el carrusel */
+        height: 100px; /* Ajusta la altura de las imágenes */
+    }
+
+    .carousel-title {
+        font-size: 18px; /* Ajusta el tamaño de la fuente del título */
+    }
+
+    .footer {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en el pie de página */
+        padding: 20px; /* Ajusta el padding */
+    }
+
+    .footer h3 {
+        font-size: 16px; /* Ajusta el tamaño de la fuente de los títulos */
+    }
+
+    .footer ul li {
+        font-size: 12px; /* Ajusta el tamaño de la fuente de los enlaces */
+    }
+
+    .social-logos img {
+        width: 40px; /* Ajusta el tamaño de los íconos de redes sociales */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item img {
+        width: 80px; /* Ajusta el tamaño de las imágenes en el carrusel para pantallas más pequeñas */
+        height: 80px; /* Ajusta la altura de las imágenes */
+    }
+
+    .search-input {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del input */
+    }
+
+    .search-button {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
+    }
+
+    .slide-item img {
+        height: 200px; /* Ajusta la altura de las imágenes en el carrusel */
+    }
+
+    .banner {
+        font-size: 14px; /* Ajusta el tamaño de la fuente en la banner */
+    }
+}
+
+/* Estilos Index */
+nav {
+    background-color: pink;
+    display: flex; /* Cambiado a flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+}
+
+nav a {
+    color: black;
+    text-align: center;
+    padding: 6px 10px;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    flex: 1; /* Permite que los enlaces ocupen el espacio disponible */
+    min-width: 230px; /* Ancho mínimo para enlaces */
+}
